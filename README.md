@@ -1,2 +1,2 @@
-# Skribblio-Word-Bank
+# Skribblio Word Bank
 Word Banks for skribblio
