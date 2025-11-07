@@ -69,8 +69,7 @@
     }
 
     main,
-    header>div,
-    #ad {
+    header>div {
       width: 100%;
       max-width: 1280px;
       margin-left: auto;
@@ -86,7 +85,7 @@
 
     #lastUpdated {
       white-space: nowrap;
-      margin: 0 1rem;
+      margin: 0 0 0 1rem;
       font-weight: bold;
       font-size: 0.6rem;
       background-color: #f5f5f5;
@@ -100,18 +99,18 @@
     }
 
     #ad {
-      font-size: 1.1rem;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      margin: 1rem auto;
       padding: 1rem;
       background-color: Aquamarine;
       border-radius: 5px;
       display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
       align-items: center;
       color: DarkGreen;
-      border: 3px solid Aquamarine;
+      border: 1px solid DarkGreen;
+      max-width: calc(1280px - 2rem);
+      width: calc(100% - 2rem);
+      box-sizing: border-box;
     }
 
     @keyframes ad {
@@ -135,12 +134,15 @@
       padding: 0.75rem;
       border-radius: 5px;
       color: DarkGreen;
-      font-size: 1rem;
       animation: ad 1s ease-in-out infinite;
+      display: block;
+      text-wrap: nowrap;
     }
 
     #ad>p {
       width: 100%;
+      display: block;
+      margin: 0;
     }
 
     .fetch-error {
@@ -162,7 +164,9 @@
 
     .filter {
       display: flex;
-      margin: 1rem 0 1rem 0;
+      margin: 1rem auto;
+      width: calc(100% - 1rem);
+      justify-content: space-between;
       flex-direction: column;
       align-content: center;
       flex-wrap: wrap;
@@ -253,10 +257,8 @@
         --height: 2.5rem;
         display: flex;
         height: var(--height);
-        margin: 1rem 0 1rem 0;
         line-height: var(--height);
         flex-direction: row;
-        width: 100%;
         flex-wrap: nowrap;
       }
 
@@ -293,9 +295,9 @@
   </header>
   <article id="ad">
     <p>
-      We have a chrome extension that will help you find the solution more quickly and conveniently. It has special
+      We have a Chrome extension that will help you find solutions more quickly and conveniently. It has special
       features such as <b>FAST SEARCH</b>, <b>FAST SUBMIT</b> and even <b>CUSTOM WORD LIST SUPPORT</b>. Check it out
-      right now for a more satisfying skribbl experience!
+      now for a more satisfying skribbl experience!
     </p>
     <a href="https://chrome.google.com/webstore/detail/skribblio-helper/pnfncicapicbmndoelcfebipoibdackb">Install
       Now!</a>
